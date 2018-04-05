@@ -1,6 +1,6 @@
 {
   "name": "@skpm/nib-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Mathieu Dutour",
   "description": "nib loader module for webpack",
   "license": "MIT",

@@ -2,10 +2,6 @@
 [![node][node]][node-url]
 
 <div align="center">
-  <a href="https://github.com/webpack/webpack">
-    <img width="200" height="200"
-      src="https://webpack.js.org/assets/icon-square-big.svg">
-  </a>
   <h1>Nib Loader</h1>
   <p>Instructs webpack to compile and emit the required XIB or NIB as file and to return an function to interact with it.</p>
 </div>

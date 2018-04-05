@@ -2,17 +2,13 @@
 /* globals NSUUID, MOClassDescription, NSBundle, NSObject, __command, MOPointer */
 var ObjClass = require('cocoascript-class').default;
 
-/**
- * Depth-first traversal for NSViews.
- */
 function walkViewTree(rootView, fn) {
   function _visit(view) {
     fn(view);
 
-    var nsArray = view.subviews();
-    var count = nsArray.count();
-    for (let i = 0; i < count; i++) {
-      _visit(nsArray.objectAtIndex(i));
+    var subviews = view.subviews();
+    for (var i = 0; i < subviews.count(); i++) {
+      _visit(subviews.objectAtIndex(i));
     }
   }
 
