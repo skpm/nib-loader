@@ -10,27 +10,21 @@ _Instructs WebPack to compile and emit the required XIB or NIB as file and to re
 npm install --save-dev @skpm/nib-loader
 ```
 
-## [Usage](https://webpack.js.org/concepts/loaders)
+Add the following rule to your WebPack config:
 
-- Create a file named `webpack.skpm.config.js` at the root of your skpm project with the following content:
-
-  ```js
-  module.exports = (exitingConfig, isCommand) => isCommand ? {
-    module: {
-      rules: [
-        {
-          test: /\.(xib|nib)$/,
-          use: [
-            {
-              loader: '@skpm/nib-loader',
-              options: {}
-            }
-          ]
-        }
-      ]
+```js
+{
+  test: /\.(xib|nib)$/,
+  use: [
+    {
+      loader: '@skpm/nib-loader',
+      options: {}
     }
-  } : {}
-  ```
+  ]
+}
+```
+
+## [Usage](https://webpack.js.org/concepts/loaders)
 
 - Create a new xib file:
   - open XCode and create a new "Cocoa Framework" project located in your skpm project with the "Objective-C" language.
