@@ -1,71 +1,66 @@
-[![npm][npm]][npm-url]
-[![node][node]][node-url]
+# Nib Loader
 
-<div align="center">
-  <h1>Nib Loader</h1>
-  <p>Instructs webpack to compile and emit the required XIB or NIB as file and to return an function to interact with it.</p>
-</div>
+_Instructs WebPack to compile and emit the required XIB or NIB as file and to return an function to interact with it._
 
-<h2 align="center">Install</h2>
+## Install
+
+> ⚠️  The loader is already included in skpm by default so if you come from skpm, you do not have to do anything.
 
 ```bash
 npm install --save-dev @skpm/nib-loader
 ```
 
-<h2 align="center"><a href="https://webpack.js.org/concepts/loaders">Usage</a></h2>
+## [Usage](https://webpack.js.org/concepts/loaders)
 
-By default the filename of the resulting file is the MD5 hash of the file's contents with the original extension of the required resource.
+- Create a file named `webpack.skpm.config.js` at the root of your skpm project with the following content:
 
-```js
-import NibUI from './file.xib'
+  ```js
+  module.exports = (exitingConfig, isCommand) => isCommand ? {
+    module: {
+      rules: [
+        {
+          test: /\.(xib|nib)$/,
+          use: [
+            {
+              loader: '@skpm/nib-loader',
+              options: {}
+            }
+          ]
+        }
+      ]
+    }
+  } : {}
+  ```
 
-var nib = NibUI({
-  'handleRename:': function(sender) {
-    console.log('renamed')
-  },
-})
+- Create a new xib file:
+  - open XCode and create a new "Cocoa Framework" project located in your skpm project with the "Objective-C" language.
+  - create a new file with the "View" template
+  - Use the Interface Builder to design your view
+- Add the following in your plugin command:
 
-nib.button.setTitle('title set at runtime')
+  ```js
+  const NibUI = require('../xcode-project-name/view-name.xib')
 
-let dialog = NSAlert.alloc().init()
-dialog.setAccessoryView(nib.getRoot())
-dialog.runModal()
-```
+  var nib = NibUI()
 
-**webpack.config.js**
-```js
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.(xib|nib)$/,
-        use: [
-          {
-            loader: '@skpm/nib-loader',
-            options: {}
-          }
-        ]
-      }
-    ]
-  }
-}
-```
+  let dialog = NSAlert.alloc().init()
+  dialog.setAccessoryView(nib.getRoot())
+  dialog.runModal()
+  ```
 
-Emits `file.nib` as file in the output directory and returns a function that takes an object which will be used to create the File Owner Class (see [Cocoascript-class](https://github.com/darknoon/cocoascript-class) for more information about this object).
+  The `NibUI` function returns an object with 2 methods:
 
-The function returns an object with 2 methods:
+  - `getRoot` which returns the root view
+  - `getOwner` which returns the File Owner Class instance
 
-- `getRoot` which returns the root view
-- `getOwner` which returns the File Owner Class instance
+  The object will also be populated with the Views that have an Identifier set. For example, let's say your nib contains a view with the identifier `button`. Then you can access this view using `nib.button`.
 
-The object will also be populated with the Views that have a Identifier set.
+### Handling events from the xib
 
-<h2 align="center">Options</h2>
+You might need to handle some events happening in your view (for example when the user clicks on a button).
+
+TBD (to be documented)
+
+## Options
 
 Same as [file-loader](https://github.com/skpm/file-loader).
-
-[npm]: https://img.shields.io/npm/v/@skpm/nib-loader.svg
-[npm-url]: https://npmjs.com/package/@skpm/nib-loader
-
-[node]: https://img.shields.io/node/v/@skpm/nib-loader.svg
-[node-url]: https://nodejs.org
