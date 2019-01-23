@@ -24,7 +24,7 @@ Add the following rule to your WebPack config:
 }
 ```
 
-## [Usage](https://webpack.js.org/concepts/loaders)
+## Usage
 
 - Create a new xib file:
   - open XCode and create a new "Cocoa Framework" project located in your skpm project with the "Objective-C" language.
