@@ -2,9 +2,11 @@
 
 exports[`Options raw {String} 1`] = `
 Object {
-  "assets": Array [
-    "../Resources/_webpack_resources/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
-  ],
-  "source": "module.exports = \\"file://\\" + context.plugin.urlForResourceNamed(\\"_webpack_resources/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\").path();",
+  "assets": Array [],
+  "source": "/* eslint-disable */
+import png from './file.png';
+
+export default png;
+",
 }
 `;

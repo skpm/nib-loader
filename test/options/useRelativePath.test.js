@@ -1,7 +1,7 @@
 /* eslint-disable
   prefer-destructuring,
 */
-import webpack from '../helpers/compiler';
+const webpack = require('../helpers/compiler');
 
 describe('Options', () => {
   describe('useRelativePath', () => {

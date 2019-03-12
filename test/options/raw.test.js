@@ -1,8 +1,8 @@
 /* eslint-disable
   prefer-destructuring,
 */
-import path from 'path';
-import webpack from '../helpers/compiler';
+const path = require('path');
+const webpack = require('../helpers/compiler');
 
 describe('Options', () => {
   describe('raw', () => {

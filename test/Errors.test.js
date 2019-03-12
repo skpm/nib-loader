@@ -1,4 +1,4 @@
-import loader from '../src';
+const loader = require('../lib');
 
 describe('Errors', () => {
   test('Loader Error', () => {

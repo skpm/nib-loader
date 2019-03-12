@@ -2,90 +2,110 @@
 
 exports[`Options outputPath {Function} 1`] = `
 Object {
-  "assets": Array [
-    "output_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
-  ],
-  "source": "module.exports = __webpack_public_path__ + \\"output_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "assets": Array [],
+  "source": "/* eslint-disable */
+import png from './file.png';
+
+export default png;
+",
 }
 `;
 
 exports[`Options outputPath {Function} with \`options.name\` 1`] = `
 Object {
-  "assets": Array [
-    "output_path_func/file.png",
-  ],
-  "source": "module.exports = __webpack_public_path__ + \\"output_path_func/file.png\\";",
+  "assets": Array [],
+  "source": "/* eslint-disable */
+import png from './file.png';
+
+export default png;
+",
 }
 `;
 
 exports[`Options outputPath {Function} with \`publicPath\` {Function} 1`] = `
 Object {
-  "assets": Array [
-    "output_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
-  ],
-  "source": "module.exports = \\"public_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "assets": Array [],
+  "source": "/* eslint-disable */
+import png from './file.png';
+
+export default png;
+",
 }
 `;
 
 exports[`Options outputPath {Function} with \`publicPath\` {String} 1`] = `
 Object {
-  "assets": Array [
-    "output_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
-  ],
-  "source": "module.exports = \\"public_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "assets": Array [],
+  "source": "/* eslint-disable */
+import png from './file.png';
+
+export default png;
+",
 }
 `;
 
 exports[`Options outputPath {String} 1`] = `
 Object {
-  "assets": Array [
-    "output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
-  ],
-  "source": "module.exports = __webpack_public_path__ + \\"output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "assets": Array [],
+  "source": "/* eslint-disable */
+import png from './file.png';
+
+export default png;
+",
 }
 `;
 
 exports[`Options outputPath {String} with \`options.name\` 1`] = `
 Object {
-  "assets": Array [
-    "output_path/file.png",
-  ],
-  "source": "module.exports = __webpack_public_path__ + \\"output_path/file.png\\";",
+  "assets": Array [],
+  "source": "/* eslint-disable */
+import png from './file.png';
+
+export default png;
+",
 }
 `;
 
 exports[`Options outputPath {String} with \`publicPath\` {Function} 1`] = `
 Object {
-  "assets": Array [
-    "output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
-  ],
-  "source": "module.exports = \\"public_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "assets": Array [],
+  "source": "/* eslint-disable */
+import png from './file.png';
+
+export default png;
+",
 }
 `;
 
 exports[`Options outputPath {String} with \`publicPath\` {String} 1`] = `
 Object {
-  "assets": Array [
-    "output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
-  ],
-  "source": "module.exports = \\"public_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "assets": Array [],
+  "source": "/* eslint-disable */
+import png from './file.png';
+
+export default png;
+",
 }
 `;
 
 exports[`Options outputPath {String} with \`publicPath\` {String} without trailing slash 1`] = `
 Object {
-  "assets": Array [
-    "output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
-  ],
-  "source": "module.exports = \\"public_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "assets": Array [],
+  "source": "/* eslint-disable */
+import png from './file.png';
+
+export default png;
+",
 }
 `;
 
 exports[`Options outputPath {String} without trailing slash 1`] = `
 Object {
-  "assets": Array [
-    "output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
-  ],
-  "source": "module.exports = __webpack_public_path__ + \\"output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "assets": Array [],
+  "source": "/* eslint-disable */
+import png from './file.png';
+
+export default png;
+",
 }
 `;
